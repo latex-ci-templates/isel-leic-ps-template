@@ -1,0 +1,27 @@
+\documentclass[a4paper,twoside,11pt]{article}
+
+% Defines external packages, language, margins, fonts and new commands
+\input{preamble}
+
+\begin{document}
+
+    \input{frontcover}
+
+    % line spacing: 12pt for single, 18pt for 1 1/2, and 24pt for double spacing
+    \baselineskip 18pt
+    \newpage
+
+    % reset page numbering
+    \setcounter{page}{1}
+    \pagenumbering{arabic}
+
+    \section{Organization Description}\label{sec:organization-description}
+    \input{sections/01_org-description}
+
+    \section{Management}\label{sec:management}
+    \input{sections/02_management}
+
+    \section{Documentation}\label{sec:documentation}
+    \input{sections/03_documentation}
+
+\end{document}

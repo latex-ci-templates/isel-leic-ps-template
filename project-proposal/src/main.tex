@@ -1,0 +1,32 @@
+\documentclass[a4paper,twoside,11pt]{article}
+\usepackage{lipsum}
+\usepackage{moresize}
+
+% ----------------------------------------------------------------------
+% Defines external packages, language, margins, fonts and new commands
+% ----------------------------------------------------------------------
+\input{preamble}
+
+\begin{document}
+
+    \input{frontcover}
+
+    \section{Introduction}\label{sec:introduction}
+    \input{sections/01_introduction}
+
+    \section{Problem}\label{sec:problem}
+    \input{sections/02_problem}
+
+    \section{Solution}\label{sec:solucao}
+    \input{sections/03_solution}
+
+    \section{Challenges and Risks}\label{sec:challenges-risks}
+    \input{sections/04_challenges-risks}
+
+    \section{Planning}\label{sec:planning}
+    \input{sections/05_planning}
+
+    \bibliographystyle{unsrt}
+    \bibliography{bibliography}
+
+\end{document}

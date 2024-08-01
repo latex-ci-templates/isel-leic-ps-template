@@ -1,0 +1,202 @@
+% 'natbib' package
+%
+% Flexible bibliography support.
+% http://www.ctan.org/tex-archive/macros/latex/contrib/natbib/
+%
+% > produce author-year style citations
+%
+% \citet  and \citep  for textual and parenthetical citations, respectively
+% \citet* and \citep* that print the full author list, and not just the abbreviated one
+% \citealt is the same as \citet but without parentheses. Similarly, \citealp is \citep without parentheses
+% \citeauthor
+% \citeyear
+% \citeyearpar
+%
+%% natbib options can be provided when package is loaded \usepackage[options]{natbib}
+%%
+%% Following options are valid:
+%%
+%%   round  -  round parentheses are used (default)
+%%   square -  square brackets are used   [option]
+%%   curly  -  curly braces are used      {option}
+%%   angle  -  angle brackets are used    <option>
+%%   semicolon  -  multiple citations separated by semi-colon (default)
+%%   colon  - same as semicolon, an earlier confusion
+%%   comma  -  separated by comma
+%%   authoryear - for author–year citations (default)
+%%   numbers-  selects numerical citations
+%%   super  -  numerical citations as superscripts, as in Nature
+%%   sort   -  sorts multiple citations according to order in ref. list
+%%   sort&compress   -  like sort, but also compresses numerical citations
+%%   compress - compresses without sorting
+%%
+% ******************************* SELECT *******************************
+%\usepackage{natbib}          % <<<<< References in alphabetical list Correia, Silva, ...
+\usepackage[squares, numbers, sort\&compress]{natbib} % <<<<< References in numbered list [1],[2],...
+% ******************************* SELECT *******************************
+
+
+% 'notoccite' package
+%
+% Prevent trouble from citations in table of contents, etc.
+% http://ctan.org/pkg/notoccite
+%
+% > If you have \cite commands in \section-like commands, or in \caption,
+%   the citation will also appear in the table of contents, or list of whatever.
+%   If you are also using an unsrt-like bibliography style, these citations will
+%   come at the very start of the bibliography, which is confusing. This package
+%   suppresses the effect.
+%
+\usepackage{notoccite}
+
+% ----------------------------------------------------------------------
+% Define document language.
+% ----------------------------------------------------------------------
+
+% 'inputenc' package
+%
+% Accept different input encodings.
+% http://www.ctan.org/tex-archive/macros/latex/base/
+%
+% > allows typing non-english text in LaTeX sources.
+%
+% ******************************* SELECT *******************************
+% \usepackage[latin1]{inputenc} % <<<<< Windows
+\usepackage[utf8]{inputenc}   % <<<<< Linux
+% ******************************* SELECT *******************************
+
+
+% 'babel' package
+%
+% Multilingual support for Plain TeX or LaTeX.
+% http://www.ctan.org/tex-archive/macros/latex/required/babel/
+%
+% > sets the variable names according to the language selected
+%
+% ******************************* SELECT *******************************
+% \usepackage[portuguese]{babel}
+\usepackage[english]{babel}
+% ******************************* SELECT *******************************
+
+% ----------------------------------------------------------------------
+% Define default and cover page fonts.
+% ----------------------------------------------------------------------
+
+% Use Arial font as default
+%
+% \renewcommand{\rmdefault}{phv}
+% \renewcommand{\sfdefault}{phv}
+
+% Define cover page fonts
+%
+%         encoding     family       series      shape
+%  \usefont{T1}     {phv}=helvetica  {b}=bold    {n}=normal
+%                   {ptm}=times      {m}=normal  {sl}=slanted
+%                                                {it}=italic
+% see more examples at
+% https://www.overleaf.com/learn/latex/Font_typefaces
+% https://tug.org/FontCatalogue/
+%
+\newcommand{\FontHn}{% 20 pt normal
+    \usefont{T1}{phv}{m}{n}\fontsize{20pt}{20pt}\selectfont}
+\newcomand{\FontHb}{% 20 pt bold
+    \usefont{T1}{phv}{b}{n}\fontsize{20pt}{20pt}\selectfont}
+\newcommand{\FontLn}{% 16 pt normal
+    \usefont{T1}{phv}{m}{n}\fontsize{16pt}{16pt}\selectfont}
+\newcommand{\FontLb}{% 16 pt bold
+    \usefont{T1}{phv}{b}{n}\fontsize{16pt}{16pt}\selectfont}
+\newcommand{\FontMn}{% 14 pt normal
+    \usefont{T1}{phv}{m}{n}\fontsize{14pt}{14pt}\selectfont}
+\newcommand{\FontMb}{% 14 pt bold
+    \usefont{T1}{phv}{b}{n}\fontsize{14pt}{14pt}\selectfont}
+\newcommand{\FontSn}{% 12 pt normal
+    \usefont{T1}{phv}{m}{n}\fontsize{12pt}{12pt}\selectfont}
+
+% 'geometry' package
+%
+% Flexible and complete interface to document dimensions.
+% http://www.ctan.org/tex-archive/macros/latex/contrib/geometry/
+%
+% > set the page margins (2.5cm minimum in every side)
+%
+\usepackage{geometry}
+\geometry{verbose,tmargin=2.5cm,bmargin=2.5cm,lmargin=2.5cm,rmargin=2.5cm}
+
+% 'setspace' package
+%
+% Set space between lines.
+% http://www.ctan.org/tex-archive/macros/latex/contrib/setspace/
+%
+% > allow setting line spacing (line spacing of 1.5)
+%
+\usepackage{setspace}
+\renewcommand{\baselinestretch}{1.2}
+
+% 'indentfirst' package
+%
+% Indent first paragraph after section header.
+% https://ctan.org/pkg/indentfirst
+%
+% > indent all paragraphs (as per IST rules)
+%
+%\usepackage{indentfirst}
+
+% 'hypcap' package
+%
+% Adjusting the anchors of captions.
+% http://www.ctan.org/tex-archive/macros/latex/contrib/oberdiek/
+%
+% > fixes the problem with hyperref, that links to floats points
+%   below the caption and not at the beginning of the float.
+%
+\usepackage[figure, table]{hypcap}
+
+% 'booktabs' package
+%
+% Publication quality tables in LaTeX
+% http://www.ctan.org/pkg/booktabs
+%
+% > enhance the quality of tables in LaTeX, providing extra commands.
+%
+% \renewcommand{\arraystretch}{<ratio>} % space between rows
+%
+\usepackage{booktabs}
+%\newcommand{\ra}[1]{\renewcommand{\arraystretch}{#1}}
+
+% Typefaces ( example: {\bf Bold text here} )
+%
+% > pre-defined
+%   \bf % bold face
+%   \it % italic
+%   \tt % typewriter
+%
+% > newly defined
+\newcommand{\tr}[1]{{\ensuremath{\textrm{#1}}}}   % text roman
+\newcommand{\tb}[1]{{\ensuremath{\textbf{#1}}}}   % text bold face
+\newcommand{\ti}[1]{{\ensuremath{\textit{#1}}}}   % text italic
+
+\usepackage{graphicx}
+\usepackage{float}
+\usepackage{enumitem}
+\usepackage{caption}
+\captionsetup[table]{skip=5pt}
+
+\usepackage{titlesec}
+%\titlespacing*{<command>}{<left>}{<before-sep>}{<after-sep>}
+% left: increases the left margin;
+% before-sep: controls the vertical space before the title;
+% after-sep: controls the vertical space after the title.
+\titlespacing*{\subsection}
+{0pt}{1.5ex}{0.5ex}
+
+\titlespacing*{\section}
+{0pt}{1.5ex}{1.0ex}
+
+\usepackage{titling}
+\setlength{\droptitle}{-60pt} % Adjust the vertical position of the title
+
+\usepackage{hyperref}
+\usepackage{hhline}
+\usepackage{amstex}
+
+\usepackage[en-US]{datetime2}

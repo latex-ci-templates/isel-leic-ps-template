@@ -1,0 +1,58 @@
+\documentclass[a4paper,openright,twoside,11pt]{report}
+
+\input{preamble}
+
+\begin{document}
+
+    \input{frontcover}
+
+    % line spacing: 12pt for single, 18pt for 1 1/2, and 24pt for double spacing
+    \baselineskip 18pt
+    \newpage
+    \thispagestyle{empty}
+
+    \cleardoublepage
+    \setcounter{page}{1}
+    \input{idpage}
+
+    \cleardoublepage
+    \input{abstracts/en-abstract}
+
+    \cleardoublepage
+    \input{abstracts/pt-abstract}
+
+    \cleardoublepage
+    % add the acknowledgements chapter (optional)
+    \thispagestyle{empty}
+    \input{chapters/00_acknowledgments}
+
+    % generate table of contents (TOC)
+    \cleardoublepage
+    \tableofcontents
+    \cleardoublepage
+
+    % generation of list of figures and tables
+    \listoffigures \cleardoublepage
+    \listoftables \cleardoublepage
+
+    % reset page numbering
+    \setcounter{page}{1}
+    \pagenumbering{arabic}
+
+    % chapters
+    \input{chapters/01_introduction}
+    \input{chapters/03_examples}
+    \input{chapters/02_context}
+    \input{chapters/04_tests}
+
+    % references
+    \clearpage
+    \bibliographystyle{unsrt}
+    \bibliography{bibliography}
+    \addcontentsline{toc}{chapter}{References}
+
+    % appendices (optional)
+    \appendix
+    \input{appendices/A_appendix_example}
+
+\end{document}
