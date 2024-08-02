@@ -39,7 +39,7 @@ designed for use in the [Project and Seminar](https://www.isel.pt/en/leic/projec
 ## Goal
 
 As the template provides a ready-to-use LaTeX environment with a pre-designed layout and automatic compilation process,
-it allows you and your team to focus _only_ on the content of the project documentation.
+it allows you and your team to **focus _only_ on the content** of the project documentation.
 
 > [!NOTE]
 > This template provides a structure for managing and compiling LaTeX documents locally, but with the need to install
@@ -104,7 +104,7 @@ this template's modular design facilitates concurrent work on the same document.
        ext.set("variable", "value")
        ```
       | Variable          | Default value | Description                                                                     |
-                                    |-------------------|---------------|---------------------------------------------------------------------------------|
+      |-------------------|---------------|---------------------------------------------------------------------------------|
       | `srcDirName`      | `src`         | name of the tex source file's directory                                         |
       | `outDirName`      | `out`         | name of the output directory, where the pdf file will be generated to           |
       | `auxDirName`      | `auxil`       | name of the auxiliary directory, where the auxiliary files will be generated to |
@@ -120,7 +120,7 @@ this template's modular design facilitates concurrent work on the same document.
     - In the run configuration panel, edit the paths to the corresponding subproject directories:
 
    | ![Run Configuration](docs/gifs/idea-main-tex-configuration.gif) |
-         |:---------------------------------------------------------------:|
+   |:---------------------------------------------------------------:|
    |                    *Edit Run Configuration*                     |
 
     - To compile the document use the shortcut `Shift + F10` or the gutter icon `Run`.
