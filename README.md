@@ -149,3 +149,8 @@ and build all pdfs in all subprojects when a `push` is made to the repository in
 Can be further customized to run on other branches, tags and/or other events, even on chron schedules.
 Learn
 more [here](https://docs.github.com/en/actions/writing-workflows/choosing-when-your-workflow-runs/events-that-trigger-workflows).
+
+Additionally, if you're certain about which folders will store the documents, you can [restrict](https://docs.github.com/en/actions/writing-workflows/choosing-when-your-workflow-runs/triggering-a-workflow#using-filters) the workflow trigger to those specific folders. This ensures that only changes in those folders will activate the workflow, regardless of the triggering event.
+
+> [!NOTE]
+> This workflow can also be triggered manually in GitHub be accessing `Actions` > `Compile and build all latex documents` > `Run Workflow`.
